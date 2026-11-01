@@ -1,0 +1,16 @@
+{"note": "Keihan stations served by Premium Car trains (keihan.co.jp/traffic/premiumcar/about/, boarding stations list); coordinates from Wikipedia.",
+ "stations": [
+  {"name": "Yodoyabashi", "jp": "淀屋橋", "city": "Osaka", "lat": 34.69235, "lng": 135.50099},
+  {"name": "Kitahama", "jp": "北浜", "city": "Osaka", "lat": 34.69159, "lng": 135.50662},
+  {"name": "Temmabashi", "jp": "天満橋", "city": "Osaka", "lat": 34.69020, "lng": 135.51663},
+  {"name": "Kyobashi", "jp": "京橋", "city": "Osaka", "lat": 34.69600, "lng": 135.53470},
+  {"name": "Chushojima", "jp": "中書島", "city": "Kyoto", "lat": 34.92688, "lng": 135.76002},
+  {"name": "Tambabashi", "jp": "丹波橋", "city": "Kyoto", "lat": 34.93865, "lng": 135.76541},
+  {"name": "Fushimi-Inari", "jp": "伏見稲荷", "city": "Kyoto", "lat": 34.96876, "lng": 135.76933},
+  {"name": "Shichijo", "jp": "七条", "city": "Kyoto", "lat": 34.98932, "lng": 135.76785},
+  {"name": "Kiyomizu-Gojo", "jp": "清水五条", "city": "Kyoto", "lat": 34.99611, "lng": 135.76853},
+  {"name": "Gion-Shijo", "jp": "祇園四条", "city": "Kyoto", "lat": 35.00381, "lng": 135.77203},
+  {"name": "Sanjo", "jp": "三条", "city": "Kyoto", "lat": 35.00911, "lng": 135.77228},
+  {"name": "Jingu-Marutamachi", "jp": "神宮丸太町", "city": "Kyoto", "lat": 35.01767, "lng": 135.77216},
+  {"name": "Demachiyanagi", "jp": "出町柳", "city": "Kyoto", "lat": 35.03028, "lng": 135.77278}
+ ]}

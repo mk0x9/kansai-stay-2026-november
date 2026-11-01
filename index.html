@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyoto &amp; Osaka (Keihan) stays · Nov 19-22 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<aside id="filters" class="box">
+  <div class="filters-head">
+    <h1>Kyoto &amp; Osaka stays · Nov 19-22</h1>
+    <button id="filters-toggle" class="icon-btn" title="Show or hide filters" aria-expanded="true">–</button>
+  </div>
+  <div id="filters-body">
+    <p class="count"><b id="count">0</b> of <span id="total">0</span> stays shown <span id="nocoords" class="muted"></span></p>
+    <div class="row">Nights</div>
+    <div class="seg" id="range">
+      <label title="A room for all three nights, Thu 19 to Sun 22"><input type="radio" name="range" value="full"><span>All 3</span></label>
+      <label title="At least one of the three nights"><input type="radio" name="range" value="any" checked><span>Any</span></label>
+      <label><input type="radio" name="range" value="0"><span>Thu</span></label>
+      <label><input type="radio" name="range" value="1"><span>Fri</span></label>
+      <label><input type="radio" name="range" value="2"><span>Sat</span></label>
+    </div>
+    <label class="row">Budget <b id="budget-val"></b><span class="muted">/ night, room for 2</span></label>
+    <input id="budget" type="range" min="10000" max="150000" step="2500" value="150000">
+    <label class="row" for="rating">Min rating <b id="rating-val"></b></label>
+    <input id="rating" type="range" min="3" max="5" step="0.1" value="3">
+    <label class="row" for="dist">Keihan Premium Car station <b id="dist-val"></b></label>
+    <input id="dist" type="range" min="200" max="3000" step="100" value="3000">
+    <label class="check"><input id="breakfast" type="checkbox"> Breakfast included</label>
+    <label class="check" title="Hides plans whose room has a shared bathroom or toilet (rooms where Jalan does not say are kept)."><input id="privbath" type="checkbox"> Private bathroom <span class="muted">(hides shared)</span></label>
+    <label class="check" title="Large shared bath (daiyokujo) or hot spring, per Jalan's bath counts."><input id="pubbath" type="checkbox"> Large public bath / onsen</label>
+    <div class="row">City</div>
+    <div class="chips" id="cities">
+      <label class="chip s-city"><input type="checkbox" value="Kyoto" checked><span>Kyoto</span></label>
+      <label class="chip s-city"><input type="checkbox" value="Osaka" checked><span>Osaka</span></label>
+    </div>
+    <div class="row">Type</div>
+    <div class="chips" id="types"></div>
+    <div class="two">
+      <label>Area<select id="area"><option value="">All</option></select></label>
+      <label>Color by<select id="colorby"><option value="type">Type</option><option value="price">Price</option></select></label>
+    </div>
+    <input id="q" type="search" placeholder="Search name, area or station">
+    <div id="legend" class="legend"></div>
+    <div class="actions"><button id="reset" class="link-btn">Reset filters</button><button class="link-btn" data-copy>Copy link</button></div>
+  </div>
+</aside>
+
+<div id="card" class="card" hidden></div>
+<aside id="panel" class="panel" hidden>
+  <button id="panel-close" class="icon-btn close" title="Close">×</button>
+  <div id="panel-body"></div>
+</aside>
+
+<div id="lightbox" class="lb" hidden role="dialog" aria-modal="true" aria-label="Photo gallery">
+  <div class="lb-top"><span id="lb-title"></span><button class="lb-btn" data-lb="close" title="Close (Esc)">×</button></div>
+  <button class="lb-btn lb-nav prev" data-lb="prev" title="Previous (←)">‹</button>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <button class="lb-btn lb-nav next" data-lb="next" title="Next (→)">›</button>
+  <div class="lb-bottom"><span id="lb-cap"></span><span id="lb-count"></span></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" crossorigin=""></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js" crossorigin=""></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

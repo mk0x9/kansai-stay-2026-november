@@ -1,0 +1,5 @@
+.claude/
+__pycache__/
+pipeline/data/
+pipeline/enrich/in/
+pipeline/enrich/out/
